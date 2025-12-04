@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arin Kulkarni - NMAP Basics Writeup</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .container { max-width: 1000px; }
+        .code-block { 
+            background-color: #1f2937; /* Darker grey for code blocks */
+            color: #6ee7b7; /* Light green code text */
+            border-left: 4px solid #06b6d4; /* Teal accent line */
+            padding: 1rem; 
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100 font-sans">
+    
+    <header class="border-b border-gray-700">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-xl font-bold text-teal-400"><a href="../index.html">Arin Kulkarni</a></div>
+            <ul class="flex space-x-6">
+                <li><a href="../index.html" class="text-gray-300 hover:text-teal-400">Home</a></li>
+                <li><a href="../about.html" class="text-gray-300 hover:text-teal-400">About Me</a></li>
+                <li><a href="../dev-projects/project-summary.html" class="text-teal-400 font-semibold hover:text-teal-300">Projects</a></li>
+                <li><a href="../contact.html" class="text-gray-300 hover:text-teal-400">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-16">
+        <section class="max-w-4xl mx-auto">
+            <h1 class="text-4xl font-bold text-teal-400 mb-2">🔒 NMAP Basics: Network Scanning Documentation</h1>
+            <p class="text-gray-400 text-lg mb-8">Hands-on writeup focusing on fundamental network discovery using the industry-standard tool, Nmap.</p>
+
+            <div class="space-y-8 text-gray-400">
+                <div>
+                    <h2 class="text-2xl font-semibold border-l-4 border-teal-400 pl-3 text-white">Objective & Environment</h2>
+                    <p class="mt-2">The primary goal was to understand the principles of network discovery and learn the syntax of Nmap for basic enumeration on a controlled virtual machine (VM) network.</p>
+                    <ul class="list-disc list-inside mt-3 space-y-1">
+                        <li>Tool: Nmap (Network Mapper)</li>
+                        <li>Environment: Kali Linux / Virtual Machine Setup</li>
+                        <li>Focus: Command line proficiency and reading raw network output.</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2 class="text-2xl font-semibold border-l-4 border-teal-400 pl-3 text-white">Key Commands & Analysis</h2>
+                    <p class="mt-2">Demonstration and analysis of essential Nmap scanning techniques:</p>
+                    
+                    <h3 class="text-xl font-semibold text-white mt-4">1. Ping Scan (Host Discovery)</h3>
+                    <p class="mb-2">Used the `-sn` flag to determine which hosts are live on the network, minimizing intrusion attempts.</p>
+                    <div class="code-block">
+                        <pre><code>nmap -sn 192.168.1.0/24</code></pre>
+                    </div>
+
+                    <h3 class="text-xl font-semibold text-white mt-4">2. Stealth Scan (SYN Scan)</h3>
+                    <p class="mb-2">Used the default SYN scan (`-sS`) to find open ports without completing the full TCP handshake, a basic technique for port enumeration.</p>
+                    <div class="code-block">
+                        <pre><code>nmap -sS [Target IP]</code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center">
+                <a href="https://github.com/theguyinblackhoodie/nmap-writeup.git" target="_blank" class="px-6 py-3 bg-teal-600 text-white font-semibold rounded-lg hover:bg-teal-500 transition duration-300">View Documentation on GitHub</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 border-t border-gray-700 py-6 mt-12">
+        <div class="container mx-auto px-6 text-center text-gray-400">
+            <div class="flex justify-center space-x-6 mb-3">
+                <a href="https://github.com/theguyinblackhoodie" target="_blank" class="text-gray-400 hover:text-teal-400">GitHub</a>
+                <a href="https://www.linkedin.com/in/arin-kulkarni-30b981317" target="_blank" class="text-gray-400 hover:text-teal-400">LinkedIn</a>
+                <a href="https://www.instagram.com/the.guy.in.black.hoodie?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="text-gray-400 hover:text-teal-400">Instagram</a>
+            </div>
+            <p class="text-sm">&copy; 2025 Arin Kulkarni. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
