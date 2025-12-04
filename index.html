@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arin Kulkarni - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Optional: Thoda sa base styling jo Tailwind se nahi hota */
+        .container { max-width: 1000px; }
+        .skill-card { transition: transform 0.3s; }
+        .skill-card:hover { transform: translateY(-5px); }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100 font-sans">
+
+    <header class="border-b border-gray-700">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-xl font-bold text-teal-400">
+                <a href="index.html">Arin Kulkarni</a>
+            </div>
+            <button id="menu-button" class="md:hidden text-gray-300 hover:text-teal-400 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+            <ul id="nav-menu" class="hidden md:flex flex-col md:flex-row space-y-2 md:space-y-0 space-x-0 md:space-x-6 mt-4 md:mt-0 items-center">
+                <li><a href="index.html" class="text-teal-400 font-semibold hover:text-teal-300">Home</a></li>
+                <li><a href="about.html" class="text-gray-300 hover:text-teal-400">About Me</a></li>
+                <li><a href="dev-projects/project-summary.html" class="text-gray-300 hover:text-teal-400">Projects</a></li>
+                <li><a href="contact.html" class="text-gray-300 hover:text-teal-400">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="container mx-auto px-6 py-24">
+            <h1 class="text-5xl font-extrabold text-white mb-4">
+                👋 Hey, I'm Arin Kulkarni
+            </h1>
+            <p class="text-xl text-gray-400 mb-8 max-w-2xl">
+                B.Tech CSE Student | Developer | Cyber Enthusiast | Video Editor.
+            </p>
+            <div class="flex space-x-4">
+                <a href="about.html" class="px-6 py-3 bg-teal-600 text-white font-semibold rounded-lg hover:bg-teal-500 transition duration-300">Know More</a>
+                <a href="contact.html" class="px-6 py-3 text-teal-400 border border-teal-400 rounded-lg hover:bg-teal-400 hover:text-gray-900 transition duration-300">Get in Touch</a>
+            </div>
+        </section>
+
+        <section class="container mx-auto px-6 py-16">
+            <h2 class="text-3xl font-bold text-center text-white mb-12">My Focus Areas</h2>
+            
+            <div class="flex flex-wrap md:flex-nowrap justify-between space-y-6 md:space-y-0 md:space-x-8">
+                
+                <div class="skill-card p-6 border-l-4 border-teal-400 bg-gray-800 rounded-lg shadow-xl w-full">
+                    <h3 class="text-xl font-semibold mb-3 text-teal-400">💻 Dev Projects</h3>
+                    <p class="text-gray-400 mb-4 text-sm">Building foundational solutions in C/C++ and web. Focus on clean architecture.</p> 
+                    <a href="dev-projects/portal-project.html" class="text-teal-400 hover:text-teal-300 font-medium text-sm">View Code →</a>
+                </div>
+
+                <div class="skill-card p-6 border-l-4 border-teal-400 bg-gray-800 rounded-lg shadow-xl w-full">
+                    <h3 class="text-xl font-semibold mb-3 text-teal-400">🔒 Cyber Learning</h3>
+                    <p class="text-gray-400 mb-4 text-sm">Actively learning Linux, networking, and security tools (NMAP). Documenting lab exercises and writeups.</p> 
+                    <a href="cybersecurity/nmap-basics-doc.html" class="text-teal-400 hover:text-teal-300 font-medium text-sm">Read Writeups →</a>
+                </div>
+
+                <div class="skill-card p-6 border-l-4 border-teal-400 bg-gray-800 rounded-lg shadow-xl w-full">
+                    <h3 class="text-xl font-semibold mb-3 text-teal-400">🎥 Creative Editing</h3>
+                    <p class="text-gray-400 mb-4 text-sm">Visual storytelling and short-form content creation using Adobe Premiere Pro and basic After Effects.</p> 
+                    <a href="video-editing/reel-project.html" class="text-teal-400 hover:text-teal-300 font-medium text-sm">See Reels →</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="bg-gray-800 border-t border-gray-700 py-6 mt-12">
+        <div class="container mx-auto px-6 text-center text-gray-400">
+            <div class="flex justify-center space-x-6 mb-3">
+                <a href="https://github.com/theguyinblackhoodie" target="_blank" class="text-gray-400 hover:text-teal-400">GitHub</a>
+                <a href="https://www.linkedin.com/in/arin-kulkarni-30b981317" target="_blank" class="text-gray-400 hover:text-teal-400">LinkedIn</a>
+                <a href="https://www.instagram.com/the.guy.in.black.hoodie?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="text-gray-400 hover:text-teal-400">Instagram</a>
+            </div>
+            <p class="text-sm">&copy; 2025 Arin Kulkarni. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
