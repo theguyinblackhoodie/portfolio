@@ -3,146 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cybersecurity Lab | TheGuyInBlackHoodie</title>
+    <title>Cyber Projects | Arin Kulkarni</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-    :root {
-        --cyber-blue: #4F46E5;
-        --cyber-green: #10b981;
-        --dark-bg: #0f172a;
-    }
+        :root {
+            --bg-dark: #0d1117;
+            --card-bg: #161b22;
+            --teal: #0eb29a; /* Tera accent color */
+            --text-main: #ffffff;
+            --text-dim: #9ca3af;
+        }
 
-    body {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background-color: #f8fafc;
-        color: #1e293b;
-        line-height: 1.6;
-    }
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
 
-    .container {
-        max-width: 900px;
-        margin: 50px auto;
-        padding: 20px;
-    }
+        .container {
+            max-width: 1100px;
+            margin: 80px auto;
+            padding: 20px;
+            text-align: center;
+        }
 
-    .project-selector-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 25px;
-        margin-top: 40px;
-    }
+        h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        .subtitle { color: var(--text-dim); margin-bottom: 50px; }
 
-    .selection-card {
-        text-decoration: none;
-        color: inherit;
-        display: block;
-    }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+        }
 
-    .card-content {
-        background: white;
-        border: 2px solid #e2e8f0;
-        padding: 30px;
-        border-radius: 16px;
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        position: relative;
-        overflow: hidden;
-    }
+        /* Wahi card style jo tere home page pe hai */
+        .cyber-card {
+            background: var(--card-bg);
+            border-left: 4px solid var(--teal);
+            padding: 30px;
+            text-align: left;
+            text-decoration: none;
+            color: white;
+            transition: transform 0.3s ease;
+            border-radius: 4px;
+        }
 
-    /* Hover effects */
-    .selection-card:hover .card-content {
-        border-color: var(--cyber-blue);
-        transform: translateY(-8px);
-        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-    }
+        .cyber-card:hover {
+            transform: translateY(-5px);
+            background: #1c2128;
+        }
 
-    .card-content h2 {
-        margin-top: 0;
-        color: #0f172a;
-        font-size: 1.5rem;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-    }
+        .cyber-card h2 {
+            color: var(--teal);
+            margin-top: 0;
+            font-size: 1.4rem;
+        }
 
-    .card-content p {
-        color: #64748b;
-        font-size: 0.95rem;
-        margin-bottom: 20px;
-    }
+        .cyber-card p {
+            color: var(--text-dim);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
 
-    .action-text {
-        color: var(--cyber-blue);
-        font-weight: 700;
-        font-size: 0.9rem;
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-    }
+        .view-link {
+            color: var(--teal);
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 15px;
+        }
 
-    .card-content::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 4px;
-        height: 100%;
-        background: var(--cyber-blue);
-        opacity: 0;
-        transition: opacity 0.3s;
-    }
-
-    .selection-card:hover .card-content::after {
-        opacity: 1;
-    }
-
-    header h1 {
-        font-size: 2.5rem;
-        color: #0f172a;
-        margin-bottom: 10px;
-    }
-
-    .back-link {
-        display: inline-block;
-        margin-top: 40px;
-        color: #64748b;
-        text-decoration: none;
-        font-size: 0.9rem;
-    }
-
-    .back-link:hover {
-        color: var(--cyber-blue);
-        text-decoration: underline;
-    }
-</style>
+        .back-home {
+            margin-top: 60px;
+            display: inline-block;
+            color: var(--text-dim);
+            text-decoration: none;
+        }
+        .back-home:hover { color: var(--teal); }
+    </style>
 </head>
 <body>
-    <main class="container">
-    <header style="text-align: center;">
-        <h1>🛡️ Cybersecurity Lab</h1>
-        <p>Mere security research aur reconnaissance projects ka collection.</p>
-    </header>
+    <div class="container">
+        <h1>🔐 Cyber Learning & Tools</h1>
+        <p class="subtitle">Detailed writeups and automated reconnaissance projects.</p>
 
-    <div class="project-selector-grid">
-        
-        <a href="nmap-basics-doc.html" class="selection-card">
-            <div class="card-content">
-                <h2>🌐 NMAP Writeup</h2>
-                <p>Network security auditing, port scanning methodologies aur defense mechanisms ka deep-dive.</p>
-                <span class="action-text">Read Writeup →</span>
-            </div>
-        </a>
+        <div class="grid">
+            <a href="nmap-basics-doc.html" class="cyber-card">
+                <h2>🌐 NMAP Basics</h2>
+                <p>Hands-on writeup focusing on fundamental network discovery using industry-standard tools.</p>
+                <span class="view-link">View Documentation →</span>
+            </a>
 
-        <a href="omni-recon.html" class="selection-card">
-            <div class="card-content">
+            <a href="omni-recon.html" class="cyber-card">
                 <h2>🔍 Omni-Recon</h2>
-                <p>Automated OSINT aur reconnaissance tool jo digital footprint gather karne mein help karta hai.</p>
-                <span class="action-text">View Project →</span>
-            </div>
-        </a>
+                <p>An automated reconnaissance tool designed for efficient information gathering and OSINT.</p>
+                <span class="view-link">Explore Project →</span>
+            </a>
+        </div>
 
+        <a href="../index.html" class="back-home">← Back to Home</a>
     </div>
-
-    <div style="text-align: center;">
-        <a href="../index.html" class="back-link">← Wapas Portfolio par jayein</a>
-    </div>
-</main>
 </body>
 </html>
