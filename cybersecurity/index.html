@@ -3,108 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cyber Projects | Arin Kulkarni</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Cybersecurity Lab | Arin Kulkarni</title>
     <style>
         :root {
             --bg-dark: #0d1117;
             --card-bg: #161b22;
-            --teal: #0eb29a; /* Tera accent color */
-            --text-main: #ffffff;
-            --text-dim: #9ca3af;
+            --teal-accent: #0eb29a;
+            --text-primary: #ffffff;
+            --text-secondary: #9ca3af;
         }
 
         body {
             background-color: var(--bg-dark);
-            color: var(--text-main);
+            color: var(--text-primary);
             font-family: 'Inter', sans-serif;
             margin: 0;
             padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
         }
 
-        .container {
-            max-width: 1100px;
-            margin: 80px auto;
-            padding: 20px;
-            text-align: center;
-        }
-
-        h1 { font-size: 2.5rem; margin-bottom: 10px; }
-        .subtitle { color: var(--text-dim); margin-bottom: 50px; }
-
-        .grid {
+        .selection-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            width: 90%;
         }
 
-        /* Wahi card style jo tere home page pe hai */
-        .cyber-card {
+        .project-card {
             background: var(--card-bg);
-            border-left: 4px solid var(--teal);
-            padding: 30px;
-            text-align: left;
-            text-decoration: none;
-            color: white;
-            transition: transform 0.3s ease;
+            border-left: 4px solid var(--teal-accent);
+            padding: 2.5rem;
             border-radius: 4px;
+            text-decoration: none;
+            transition: all 0.3s ease;
         }
 
-        .cyber-card:hover {
-            transform: translateY(-5px);
+        .project-card:hover {
+            transform: translateY(-8px);
             background: #1c2128;
         }
 
-        .cyber-card h2 {
-            color: var(--teal);
-            margin-top: 0;
-            font-size: 1.4rem;
+        .project-card h2 {
+            color: var(--teal-accent);
+            margin: 0 0 1rem 0;
+            font-size: 1.5rem;
         }
 
-        .cyber-card p {
-            color: var(--text-dim);
+        .project-card p {
+            color: var(--text-secondary);
             font-size: 0.95rem;
             line-height: 1.6;
+            margin-bottom: 1.5rem;
         }
 
-        .view-link {
-            color: var(--teal);
+        .action-link {
+            color: var(--teal-accent);
             font-weight: 600;
-            font-size: 0.9rem;
-            text-decoration: none;
-            display: inline-block;
-            margin-top: 15px;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
-
-        .back-home {
-            margin-top: 60px;
-            display: inline-block;
-            color: var(--text-dim);
-            text-decoration: none;
-        }
-        .back-home:hover { color: var(--teal); }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>🔐 Cyber Learning & Tools</h1>
-        <p class="subtitle">Detailed writeups and automated reconnaissance projects.</p>
+    <div class="selection-grid">
+        <a href="nmap-basics-doc.html" class="project-card">
+            <h2>NMAP Basics</h2>
+            <p>A comprehensive writeup on network discovery, service enumeration, and security auditing using industry-standard tools.</p>
+            <span class="action-link">View Documentation →</span>
+        </a>
 
-        <div class="grid">
-            <a href="nmap-basics-doc.html" class="cyber-card">
-                <h2>🌐 NMAP Basics</h2>
-                <p>Hands-on writeup focusing on fundamental network discovery using industry-standard tools.</p>
-                <span class="view-link">View Documentation →</span>
-            </a>
-
-            <a href="omni-recon.html" class="cyber-card">
-                <h2>🔍 Omni-Recon</h2>
-                <p>An automated reconnaissance tool designed for efficient information gathering and OSINT.</p>
-                <span class="view-link">Explore Project →</span>
-            </a>
-        </div>
-
-        <a href="../index.html" class="back-home">← Back to Home</a>
+        <a href="omni-recon.html" class="project-card">
+            <h2>Omni-Recon</h2>
+            <p>An automated reconnaissance tool developed to streamline information gathering and digital footprinting during the OSINT phase.</p>
+            <span class="action-link">Explore Project →</span>
+        </a>
     </div>
 </body>
 </html>
