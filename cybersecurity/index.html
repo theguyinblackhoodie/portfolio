@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Lab | TheGuyInBlackHoodie</title>
+    <style>
+    :root {
+        --cyber-blue: #4F46E5;
+        --cyber-green: #10b981;
+        --dark-bg: #0f172a;
+    }
+
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f8fafc;
+        color: #1e293b;
+        line-height: 1.6;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: 50px auto;
+        padding: 20px;
+    }
+
+    .project-selector-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 25px;
+        margin-top: 40px;
+    }
+
+    .selection-card {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+    }
+
+    .card-content {
+        background: white;
+        border: 2px solid #e2e8f0;
+        padding: 30px;
+        border-radius: 16px;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* Hover effects */
+    .selection-card:hover .card-content {
+        border-color: var(--cyber-blue);
+        transform: translateY(-8px);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+
+    .card-content h2 {
+        margin-top: 0;
+        color: #0f172a;
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .card-content p {
+        color: #64748b;
+        font-size: 0.95rem;
+        margin-bottom: 20px;
+    }
+
+    .action-text {
+        color: var(--cyber-blue);
+        font-weight: 700;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    .card-content::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 4px;
+        height: 100%;
+        background: var(--cyber-blue);
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    .selection-card:hover .card-content::after {
+        opacity: 1;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+        color: #0f172a;
+        margin-bottom: 10px;
+    }
+
+    .back-link {
+        display: inline-block;
+        margin-top: 40px;
+        color: #64748b;
+        text-decoration: none;
+        font-size: 0.9rem;
+    }
+
+    .back-link:hover {
+        color: var(--cyber-blue);
+        text-decoration: underline;
+    }
+</style>
+</head>
+<body>
+    <main class="container">
+    <header style="text-align: center;">
+        <h1>🛡️ Cybersecurity Lab</h1>
+        <p>Mere security research aur reconnaissance projects ka collection.</p>
+    </header>
+
+    <div class="project-selector-grid">
+        
+        <a href="nmap-basics-doc.html" class="selection-card">
+            <div class="card-content">
+                <h2>🌐 NMAP Writeup</h2>
+                <p>Network security auditing, port scanning methodologies aur defense mechanisms ka deep-dive.</p>
+                <span class="action-text">Read Writeup →</span>
+            </div>
+        </a>
+
+        <a href="omni-recon.html" class="selection-card">
+            <div class="card-content">
+                <h2>🔍 Omni-Recon</h2>
+                <p>Automated OSINT aur reconnaissance tool jo digital footprint gather karne mein help karta hai.</p>
+                <span class="action-text">View Project →</span>
+            </div>
+        </a>
+
+    </div>
+
+    <div style="text-align: center;">
+        <a href="../index.html" class="back-link">← Wapas Portfolio par jayein</a>
+    </div>
+</main>
+</body>
+</html>
