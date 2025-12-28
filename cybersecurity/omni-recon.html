@@ -3,50 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Omni-Recon | Project Showcase</title>
-    <link rel="stylesheet" href="../assets/css/style-portfolio.css">
+    <title>Omni-Recon | Arin Kulkarni</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #0d1117;
+            --teal: #0eb29a;
+            --text-main: #ffffff;
+            --text-dim: #9ca3af;
+            --code-bg: #161b22;
+        }
+
+        body { background: var(--bg-dark); color: white; font-family: 'Inter', sans-serif; padding: 40px 10%; line-height: 1.6; }
+        
+        h1 { color: var(--teal); font-size: 2.2rem; display: flex; align-items: center; gap: 15px; }
+        h2 { border-left: 3px solid var(--teal); padding-left: 15px; margin-top: 40px; font-size: 1.5rem; }
+
+        .meta-info { display: flex; gap: 40px; margin: 30px 0; color: var(--text-dim); font-size: 0.9rem; }
+        .meta-item b { color: white; display: block; margin-bottom: 5px; }
+
+        .screenshot-box {
+            background: var(--code-bg);
+            padding: 15px;
+            border-radius: 8px;
+            margin: 30px 0;
+            border: 1px solid #30363d;
+        }
+        .screenshot-box img { width: 100%; border-radius: 4px; }
+
+        .btn-github {
+            background: var(--teal);
+            color: #0d1117;
+            padding: 12px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-block;
+            margin-top: 40px;
+        }
+
+        ul { color: var(--text-dim); }
+        li { margin-bottom: 10px; }
+    </style>
 </head>
 <body>
-    <main class="container">
-        <header>
-            <h1>🔍 Project: Omni-Recon</h1>
-            <p><strong>Category:</strong> Information Gathering & Reconnaissance</p>
-        </header>
 
-        <section class="project-overview">
-            <h2>Overview</h2>
-            <p>Omni-Recon ek powerful reconnaissance tool hai jo targets ki information gather karne mein help karta hai. Iska main focus scanning process ko automate karna aur vulnerabilities ko identify karna hai.</p>
-        </section>
+    <h1>🔍 Omni-Recon: Automated Reconnaissance</h1>
+    <p style="color: var(--text-dim);">Automating the process of information gathering to identify digital footprints efficiently.</p>
 
-        <section class="project-screenshots">
-            <h2>Tool Interface</h2>
-            <div class="screenshot-card">
-                <img src="../assets/img/Omni-recon.jpeg" alt="Omni-Recon Terminal" style="width:100%; border-radius: 8px;">
-            </div>
-        </section>
+    <div class="meta-info">
+        <div class="meta-item"><b>Tool</b> Python/Bash Based</div>
+        <div class="meta-item"><b>Environment</b> Kali Linux / Parrot OS</div>
+        <div class="meta-item"><b>Focus</b> OSINT & Active Scanning</div>
+    </div>
 
-        <section class="tech-specs">
-            <h2>Tools & Technologies Used</h2>
-            <ul>
-                <li><strong>Language:</strong> Python / Bash (Jo bhi tune use kiya ho)</li>
-                <li><strong>Core Tools:</strong> Nmap, Sublist3r, Whois</li>
-                <li><strong>Methodology:</strong> Passive & Active Reconnaissance</li>
-            </ul>
-        </section>
+    <h2>Objective & Overview</h2>
+    <p>Omni-Recon ka primary goal reconnaissance phase ko automate karna hai. Ye tool multiple discovery tools ko combine karke ek single report generate karta hai, jo manual effort ko 70% tak kam kar deta hai.</p>
 
-        <section class="key-features">
-            <h2>Key Features</h2>
-            <ul>
-                <li>✅ Subdomain Discovery</li>
-                <li>✅ Port Scanning & Service Detection</li>
-                <li>✅ Automated Report Generation</li>
-            </ul>
-        </section>
+    <div class="screenshot-box">
+        <img src="../assets/img/omni-recon.jpeg" alt="Omni-Recon Terminal Output">
+    </div>
 
-        <footer>
-            <a href="../index.html" class="btn">← Back to Portfolio</a>
-            <a href="TERI_GITHUB_LINK" class="btn" style="background: #222; color: white;">View Source on GitHub</a>
-        </footer>
-    </main>
+    <h2>Key Features & Modules</h2>
+    <ul>
+        <li><b>Subdomain Enumeration:</b> Integrating tools like Sublist3r for deep discovery.</li>
+        <li><b>Port Analysis:</b> Automated Nmap scans for service and version detection.</li>
+        <li><b>Whois Lookup:</b> Gathering domain registration details instantly.</li>
+    </ul>
+
+    <a href="https://github.com/tera-username/omni-recon" target="_blank" class="btn-github">View Project on GitHub</a>
+    <br><br>
+    <a href="index.html" style="color: var(--text-dim); text-decoration: none;">← Back to Selection</a>
+
 </body>
 </html>
